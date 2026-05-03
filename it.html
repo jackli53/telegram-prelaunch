@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bonus per nuovi utenti</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg,#0f172a,#1e293b);
+    color: #fff;
+    text-align: center;
+}
+
+.container {
+    max-width: 420px;
+    margin: auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 26px;
+    margin-top: 30px;
+}
+
+.bonus {
+    background: #22c55e;
+    padding: 18px;
+    border-radius: 12px;
+    margin: 20px 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.steps {
+    text-align: left;
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+.steps p {
+    margin: 8px 0;
+}
+
+.btn {
+    display: block;
+    background: #facc15;
+    color: #000;
+    padding: 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.trust {
+    margin-top: 20px;
+    font-size: 14px;
+    opacity: 0.85;
+}
+
+.small {
+    margin-top: 15px;
+    font-size: 12px;
+    opacity: 0.6;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>Hai ricevuto un bonus 🎁</h1>
+
+<div class="bonus">
+Fino a 1000€ + giri gratis
+</div>
+
+<div class="steps">
+<p>✔ Registrazione veloce (30 secondi)</p>
+<p>✔ Attiva il bonus</p>
+<p>✔ Inizia a giocare subito</p>
+</div>
+
+<a class="btn" id="ctaBtn" href="#">
+Attiva bonus
+</a>
+
+<div class="trust">
+✔ Pagamenti veloci<br>
+✔ Piattaforma sicura<br>
+✔ Popolare in Italia
+</div>
+
+<p class="small">
+Offerta valida per nuovi utenti in Italia
+</p>
+
+</div>
+
+<script>
+
+// ===== 你的Offer链接 =====
+var offerA = "https://rbn.lynmonkel.com/?mid=368633_2126627&subid=telegram_it&subid={zoneid}";
+var offerB = "https://rbn.lynmonkel.com/?mid=368633_2126627&subid=telegram_it&subid=fallback";
+
+// ===== 点击跳转主Offer =====
+document.getElementById("ctaBtn").href = offerA;
+
+// ===== 15秒未点击 → 自动跳转备用Offer =====
+setTimeout(function(){
+    window.location.href = offerB;
+}, 15000);
+
+</script>
+
+</body>
+</html>
